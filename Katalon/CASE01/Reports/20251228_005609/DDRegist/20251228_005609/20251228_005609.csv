@@ -1,0 +1,226 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+DDRegist,Chrome 143.0.7499.148,,,28-12-2025 00:56:16,28-12-2025 01:01:50,5m - 34.350s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 00:56:17,28-12-2025 00:56:54,36.792s,PASSED
+"DATA BINDING - {""DateOfBirth"":""01 January,2000"",""Email"":""farhan@test.com"",""ExpectedResult"":""Success"",""FirstName"":""Farhan"",""State"":""NCR"",""LastName"":""Test"",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""8123456782""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 00:56:19,28-12-2025 00:56:24,5.322s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 00:56:24,28-12-2025 00:56:25,0.959s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 00:56:25,28-12-2025 00:56:31,5.259s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:56:31,28-12-2025 00:56:41,10.211s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:56:41,28-12-2025 00:56:41,0.747s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 00:56:41,28-12-2025 00:56:42,0.789s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 00:56:42,28-12-2025 00:56:43,0.448s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 00:56:43,28-12-2025 00:56:43,0.734s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 00:56:43,28-12-2025 00:56:44,0.425s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 00:56:44,28-12-2025 00:56:44,0.558s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 00:56:44,28-12-2025 00:56:45,0.359s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 00:56:45,28-12-2025 00:56:46,1.103s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 00:56:46,28-12-2025 00:56:47,1.037s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 00:56:47,28-12-2025 00:56:48,0.682s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 00:56:48,28-12-2025 00:56:48,0.564s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 00:56:48,28-12-2025 00:56:49,0.384s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 00:56:49,28-12-2025 00:56:49,0.405s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 00:56:49,28-12-2025 00:56:50,0.697s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 00:56:50,28-12-2025 00:56:52,2.162s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 00:56:52,28-12-2025 00:56:53,0.677s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 00:56:53,28-12-2025 00:56:54,1.680s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 00:56:54,28-12-2025 00:57:26,32.054s,PASSED
+"DATA BINDING - {""DateOfBirth"":""02 January,2000"",""Email"":""farhan@test.com"",""ExpectedResult"":""Error:FirstNamerequired"",""State"":""NCR"",""(Default) First..."":"""",""LastName"":""Test"",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""8123456782""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 00:56:54,28-12-2025 00:56:57,2.549s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 00:56:57,28-12-2025 00:56:58,0.864s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 00:56:58,28-12-2025 00:57:03,5.001s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:57:03,28-12-2025 00:57:03,0.040s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:57:03,28-12-2025 00:57:05,2.181s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 00:57:05,28-12-2025 00:57:06,0.768s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 00:57:06,28-12-2025 00:57:06,0.437s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 00:57:06,28-12-2025 00:57:07,0.704s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 00:57:07,28-12-2025 00:57:07,0.353s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:07,28-12-2025 00:57:08,0.632s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:08,28-12-2025 00:57:08,0.360s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 00:57:08,28-12-2025 00:57:09,1.119s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 00:57:09,28-12-2025 00:57:11,1.090s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:11,28-12-2025 00:57:11,0.619s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:11,28-12-2025 00:57:12,0.569s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:12,28-12-2025 00:57:12,0.375s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:12,28-12-2025 00:57:12,0.357s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 00:57:12,28-12-2025 00:57:13,0.673s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 00:57:13,28-12-2025 00:57:15,2.135s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:15,28-12-2025 00:57:16,0.568s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 00:57:16,28-12-2025 00:57:26,10.132s,WARNING
+else,Chrome 143.0.7499.148,,,28-12-2025 00:57:26,28-12-2025 00:57:26,0.388s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 00:57:26,28-12-2025 00:58:02,35.506s,PASSED
+"DATA BINDING - {""DateOfBirth"":""03 January,2000"",""Email"":""farhan@test.com"",""ExpectedResult"":""Error:LastNamerequired"",""FirstName"":""Farhan"",""State"":""NCR"",""(Default) LastN..."":"""",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""8123456782""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 00:57:26,28-12-2025 00:57:29,2.216s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 00:57:29,28-12-2025 00:57:39,10.178s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 00:57:39,28-12-2025 00:57:39,0.193s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:57:39,28-12-2025 00:57:41,1.608s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:57:41,28-12-2025 00:57:41,0.000s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 00:57:41,28-12-2025 00:57:41,0.874s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 00:57:41,28-12-2025 00:57:42,0.583s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 00:57:42,28-12-2025 00:57:43,0.710s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 00:57:43,28-12-2025 00:57:43,0.414s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:43,28-12-2025 00:57:44,0.509s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:44,28-12-2025 00:57:44,0.352s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 00:57:44,28-12-2025 00:57:45,1.066s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 00:57:45,28-12-2025 00:57:46,0.990s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:46,28-12-2025 00:57:47,0.716s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:47,28-12-2025 00:57:47,0.610s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:47,28-12-2025 00:57:48,0.357s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:48,28-12-2025 00:57:48,0.380s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 00:57:48,28-12-2025 00:57:49,0.674s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 00:57:49,28-12-2025 00:57:51,2.171s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 00:57:51,28-12-2025 00:57:52,0.556s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 00:57:52,28-12-2025 00:58:02,10.033s,WARNING
+else,Chrome 143.0.7499.148,,,28-12-2025 00:58:02,28-12-2025 00:58:02,0.254s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 00:58:02,28-12-2025 00:58:43,41.051s,PASSED
+"DATA BINDING - {""DateOfBirth"":""03 January,2000"",""Email"":""farhantest.com"",""ExpectedResult"":""Error:InvalidEmail"",""FirstName"":""Farhan"",""State"":""NCR"",""LastName"":""Test"",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""8123456782""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 00:58:02,28-12-2025 00:58:04,2.111s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 00:58:04,28-12-2025 00:58:05,0.887s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 00:58:05,28-12-2025 00:58:13,7.587s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:58:13,28-12-2025 00:58:14,1.633s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:58:14,28-12-2025 00:58:15,0.832s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 00:58:15,28-12-2025 00:58:16,1.005s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 00:58:16,28-12-2025 00:58:17,0.499s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 00:58:17,28-12-2025 00:58:20,3.086s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 00:58:20,28-12-2025 00:58:20,0.660s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:20,28-12-2025 00:58:21,1.101s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:21,28-12-2025 00:58:22,0.636s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 00:58:22,28-12-2025 00:58:23,1.434s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 00:58:23,28-12-2025 00:58:25,1.271s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:25,28-12-2025 00:58:25,0.741s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:25,28-12-2025 00:58:26,0.664s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:26,28-12-2025 00:58:27,0.782s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:27,28-12-2025 00:58:27,0.438s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 00:58:27,28-12-2025 00:58:29,1.269s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 00:58:29,28-12-2025 00:58:32,3.099s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:32,28-12-2025 00:58:32,0.733s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 00:58:32,28-12-2025 00:58:43,10.222s,WARNING
+else,Chrome 143.0.7499.148,,,28-12-2025 00:58:43,28-12-2025 00:58:43,0.282s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 00:58:43,28-12-2025 00:59:15,32.272s,PASSED
+"DATA BINDING - {""DateOfBirth"":""03 January,2000"",""Email"":""farhantest@jur"",""ExpectedResult"":""Error:InvalidEmail"",""FirstName"":""Farhan"",""State"":""NCR"",""LastName"":""Test"",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""8123456782""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 00:58:43,28-12-2025 00:58:45,2.246s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 00:58:45,28-12-2025 00:58:51,5.513s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 00:58:51,28-12-2025 00:58:51,0.156s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:58:51,28-12-2025 00:58:53,1.860s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:58:53,28-12-2025 00:58:54,0.730s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 00:58:54,28-12-2025 00:58:54,0.782s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 00:58:54,28-12-2025 00:58:55,0.449s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 00:58:55,28-12-2025 00:58:56,0.772s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 00:58:56,28-12-2025 00:58:56,0.380s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:56,28-12-2025 00:58:57,0.656s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:57,28-12-2025 00:58:57,0.399s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 00:58:57,28-12-2025 00:58:58,1.167s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 00:58:58,28-12-2025 00:58:59,1.124s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 00:58:59,28-12-2025 00:59:00,0.652s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:00,28-12-2025 00:59:01,0.591s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:01,28-12-2025 00:59:01,0.399s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:01,28-12-2025 00:59:01,0.389s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 00:59:01,28-12-2025 00:59:02,0.726s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 00:59:02,28-12-2025 00:59:04,2.238s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:04,28-12-2025 00:59:05,0.678s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 00:59:05,28-12-2025 00:59:15,10.042s,WARNING
+else,Chrome 143.0.7499.148,,,28-12-2025 00:59:15,28-12-2025 00:59:15,0.282s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 00:59:15,28-12-2025 00:59:51,35.475s,PASSED
+"DATA BINDING - {""DateOfBirth"":""03 January,2000"",""(Default) Gende..."":"""",""Email"":""farhan@test.com"",""ExpectedResult"":""Error:Genderrequired"",""FirstName"":""Farhan"",""State"":""NCR"",""LastName"":""Test"",""City"":""Delhi"",""varUserNumber"":""8123456782""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 00:59:15,28-12-2025 00:59:18,2.459s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 00:59:18,28-12-2025 00:59:19,1.088s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 00:59:19,28-12-2025 00:59:26,7.146s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:59:26,28-12-2025 00:59:28,2.126s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 00:59:28,28-12-2025 00:59:29,0.987s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 00:59:29,28-12-2025 00:59:30,0.838s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 00:59:30,28-12-2025 00:59:30,0.002s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 00:59:30,28-12-2025 00:59:31,0.820s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 00:59:31,28-12-2025 00:59:31,0.548s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:31,28-12-2025 00:59:32,0.658s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:32,28-12-2025 00:59:32,0.404s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 00:59:32,28-12-2025 00:59:34,1.197s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 00:59:34,28-12-2025 00:59:35,1.147s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:35,28-12-2025 00:59:35,0.691s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:35,28-12-2025 00:59:36,0.611s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:36,28-12-2025 00:59:37,0.422s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:37,28-12-2025 00:59:37,0.391s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 00:59:37,28-12-2025 00:59:38,0.741s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 00:59:38,28-12-2025 00:59:40,2.166s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 00:59:40,28-12-2025 00:59:40,0.580s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 00:59:40,28-12-2025 00:59:50,10.082s,WARNING
+else,Chrome 143.0.7499.148,,,28-12-2025 00:59:50,28-12-2025 00:59:51,0.282s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 00:59:51,28-12-2025 01:00:43,51.857s,PASSED
+"DATA BINDING - {""DateOfBirth"":""03 January,2000"",""Email"":""farhan@test.com"",""ExpectedResult"":""Error:Mobilemustbe10digits"",""FirstName"":""Farhan"",""State"":""NCR"",""LastName"":""Test"",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""8123""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 00:59:51,28-12-2025 00:59:53,2.334s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 00:59:53,28-12-2025 00:59:54,0.976s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 00:59:54,28-12-2025 01:00:20,25.463s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 01:00:20,28-12-2025 01:00:21,1.197s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 01:00:21,28-12-2025 01:00:22,0.735s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 01:00:22,28-12-2025 01:00:22,0.743s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 01:00:22,28-12-2025 01:00:23,0.419s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 01:00:23,28-12-2025 01:00:24,0.744s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 01:00:24,28-12-2025 01:00:24,0.378s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 01:00:24,28-12-2025 01:00:24,0.595s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 01:00:24,28-12-2025 01:00:25,0.347s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 01:00:25,28-12-2025 01:00:26,1.083s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 01:00:26,28-12-2025 01:00:27,1.020s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 01:00:27,28-12-2025 01:00:28,0.636s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 01:00:28,28-12-2025 01:00:28,0.575s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 01:00:28,28-12-2025 01:00:29,0.387s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 01:00:29,28-12-2025 01:00:29,0.374s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 01:00:29,28-12-2025 01:00:30,0.694s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 01:00:30,28-12-2025 01:00:32,2.208s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 01:00:32,28-12-2025 01:00:32,0.586s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 01:00:32,28-12-2025 01:00:42,10.027s,WARNING
+else,Chrome 143.0.7499.148,,,28-12-2025 01:00:42,28-12-2025 01:00:43,0.262s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 01:00:43,28-12-2025 01:01:25,42.089s,PASSED
+"DATA BINDING - {""DateOfBirth"":""03 January,2000"",""Email"":""farhan@test.com"",""ExpectedResult"":""Error:Mobilemustcontaindigits"",""FirstName"":""Farhan"",""State"":""NCR"",""LastName"":""Test"",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""0812abcd90""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 01:00:43,28-12-2025 01:00:45,2.310s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 01:00:45,28-12-2025 01:00:46,1.056s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 01:00:46,28-12-2025 01:00:57,10.458s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 01:00:57,28-12-2025 01:01:03,6.433s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 01:01:03,28-12-2025 01:01:04,0.716s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 01:01:04,28-12-2025 01:01:04,0.737s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 01:01:04,28-12-2025 01:01:05,0.417s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 01:01:05,28-12-2025 01:01:06,0.707s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 01:01:06,28-12-2025 01:01:06,0.358s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:06,28-12-2025 01:01:07,0.590s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:07,28-12-2025 01:01:07,0.357s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 01:01:07,28-12-2025 01:01:08,1.076s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 01:01:08,28-12-2025 01:01:09,1.023s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:09,28-12-2025 01:01:10,0.666s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:10,28-12-2025 01:01:10,0.584s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:10,28-12-2025 01:01:11,0.386s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:11,28-12-2025 01:01:11,0.377s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 01:01:11,28-12-2025 01:01:12,0.691s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 01:01:12,28-12-2025 01:01:14,2.164s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:14,28-12-2025 01:01:14,0.600s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 01:01:14,28-12-2025 01:01:25,10.052s,WARNING
+else,Chrome 143.0.7499.148,,,28-12-2025 01:01:25,28-12-2025 01:01:25,0.268s,PASSED
+,,,,,,,
+Test Cases/RegisterCase,Chrome 143.0.7499.148,,,28-12-2025 01:01:25,28-12-2025 01:01:50,24.826s,PASSED
+"DATA BINDING - {""DateOfBirth"":""03 January,2000"",""Email"":""farhan@test.com"",""ExpectedResult"":""Error:Daterequired"",""FirstName"":""Farhan"",""LastName"":""Test"",""Gender"":""Male"",""City"":""Delhi"",""varUserNumber"":""8123456782"",""(Default) State"":""""}",,,,,,,
+"openBrowser("""")",Chrome 143.0.7499.148,,,28-12-2025 01:01:25,28-12-2025 01:01:27,2.121s,PASSED
+"navigateToUrl(""https://demoqa.com/automation-practice-form"")",Chrome 143.0.7499.148,,,28-12-2025 01:01:27,28-12-2025 01:01:28,1.015s,PASSED
+maximizeWindow(),Chrome 143.0.7499.148,,,28-12-2025 01:01:28,28-12-2025 01:01:37,8.912s,PASSED
+"if (FirstName != """")",Chrome 143.0.7499.148,,,28-12-2025 01:01:37,28-12-2025 01:01:38,1.305s,PASSED
+"if (LastName != """")",Chrome 143.0.7499.148,,,28-12-2025 01:01:38,28-12-2025 01:01:39,0.814s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Email_userEmail""), Email)",Chrome 143.0.7499.148,,,28-12-2025 01:01:39,28-12-2025 01:01:40,0.911s,PASSED
+"if (Gender == ""Male"")",Chrome 143.0.7499.148,,,28-12-2025 01:01:40,28-12-2025 01:01:40,0.453s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_userNumber""), varUserNumber.toString())",Chrome 143.0.7499.148,,,28-12-2025 01:01:40,28-12-2025 01:01:41,0.810s,PASSED
+"clearText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), STOP_ON_FAILURE)",Chrome 143.0.7499.148,,,28-12-2025 01:01:41,28-12-2025 01:01:42,0.412s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(CONTROL, ""a""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:42,28-12-2025 01:01:42,0.565s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), Keys.chord(""0""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:42,28-12-2025 01:01:43,0.369s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Date of Birth""), DateOfBirth)",Chrome 143.0.7499.148,,,28-12-2025 01:01:43,28-12-2025 01:01:44,1.129s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/input_Subjects""), ""a"")",Chrome 143.0.7499.148,,,28-12-2025 01:01:44,28-12-2025 01:01:45,1.040s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/div_Maths""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:45,28-12-2025 01:01:45,0.666s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Sports""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:45,28-12-2025 01:01:46,0.593s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Reading""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:46,28-12-2025 01:01:46,0.379s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/label_Music""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:46,28-12-2025 01:01:47,0.378s,PASSED
+"setText(findTestObject(""Object Repository/Page_DEMOQA/textarea_Current Address""), ""adaw"")",Chrome 143.0.7499.148,,,28-12-2025 01:01:47,28-12-2025 01:01:47,0.708s,PASSED
+"if (State != """")",Chrome 143.0.7499.148,,,28-12-2025 01:01:47,28-12-2025 01:01:47,0.002s,PASSED
+"else if (State == """")",Chrome 143.0.7499.148,,,28-12-2025 01:01:47,28-12-2025 01:01:48,0.304s,PASSED
+"click(findTestObject(""Object Repository/Page_DEMOQA/button_Submit""))",Chrome 143.0.7499.148,,,28-12-2025 01:01:48,28-12-2025 01:01:48,0.424s,PASSED
+"if (waitForElementVisible(findTestObject(""Page_DEMOQA/Confirm_TableValuesStudent""), 10))",Chrome 143.0.7499.148,,,28-12-2025 01:01:48,28-12-2025 01:01:50,1.477s,PASSED

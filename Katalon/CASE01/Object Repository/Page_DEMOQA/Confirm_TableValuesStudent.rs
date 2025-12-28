@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Confirm_TableValuesStudent</name>
+   <tag></tag>
+   <elementGuidId>f8df70b7-bdeb-4f56-a6b3-9f7eaf3c9df6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.modal-body</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>ea3ef863-2525-442d-8883-a6b769b42fae</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>modal-body</value>
+      <webElementGuid>75a3c821-9e9b-4f71-886c-0149bf1038a4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>LabelValuesStudent Nameada asdaStudent EmailGenderMaleMobile2131231231Date of Birth27 December,2025SubjectsMathsHobbiesSports, Reading, MusicPictureAddressdawdwState and CityNCR Delhi</value>
+      <webElementGuid>39d81cbf-0b0c-4d43-8a3b-8d4bf3def5c0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;modal-open&quot;]/div[@class=&quot;fade modal show&quot;]/div[@class=&quot;modal-dialog modal-lg&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body&quot;]</value>
+      <webElementGuid>2d9231be-9374-401b-91d2-2a28bf485d63</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]</value>
+      <webElementGuid>ddbece94-e38b-438f-9e24-c05b478552ca</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'])[1]/following::div[8]</value>
+      <webElementGuid>5ba63f06-f9b9-4892-a0b7-d673636e5e78</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/div/div/div[2]</value>
+      <webElementGuid>59d5d802-31fd-4798-8b0d-e591225c379a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'LabelValuesStudent Nameada asdaStudent EmailGenderMaleMobile2131231231Date of Birth27 December,2025SubjectsMathsHobbiesSports, Reading, MusicPictureAddressdawdwState and CityNCR Delhi' or . = 'LabelValuesStudent Nameada asdaStudent EmailGenderMaleMobile2131231231Date of Birth27 December,2025SubjectsMathsHobbiesSports, Reading, MusicPictureAddressdawdwState and CityNCR Delhi')]</value>
+      <webElementGuid>dc7fe237-4296-4125-8d67-e173741647e3</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

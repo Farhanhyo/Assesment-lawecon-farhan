@@ -1,0 +1,510 @@
+2025-12-28 00:56:15.334 INFO  c.k.k.c.l.logback.LogbackConfigurator    - Logback default configuration initialized from: C:\Users\Blackvai\.katalon\packages\KSE-10.3.2\configuration\org.eclipse.osgi\133\0\.cp\resources\logback\logback-execution.xml
+2025-12-28 00:56:15.341 INFO  c.k.k.c.l.logback.LogbackConfigurator    - Logback custom configuration initialized from: C:\Users\Blackvai\Katalon Studio\laweconAssesment\Include\config\log.properties
+2025-12-28 00:56:16.213 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/DDRegist
+2025-12-28 00:56:16.466 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = farhanhyo27
+2025-12-28 00:56:16.468 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = laweconAssesment
+2025-12-28 00:56:16.469 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = Blackvai - Blackvai-Laptop
+2025-12-28 00:56:16.470 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-12-28 00:56:16.472 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 192.168.68.108
+2025-12-28 00:56:16.474 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.4.3.0
+2025-12-28 00:56:17.901 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 00:56:17.902 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 00:56:18.233 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 00:56:18.239 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 00:56:18.242 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhan@test.com
+2025-12-28 00:56:18.246 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 00:56:18.248 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123456782
+2025-12-28 00:56:18.248 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 01 January,2000
+2025-12-28 00:56:18.249 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 00:56:18.250 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 00:56:18.252 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Success
+2025-12-28 00:56:19.462 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 00:56:19.958 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 00:56:20.051 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 12:56:23 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 00:56:24.604 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = eb45c36cf03b0db4fe312b9a8e7f124e
+2025-12-28 00:56:24.610 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 00:56:24.612 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 00:56:24.613 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 00:56:24.644 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 00:56:24.785 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 00:56:25.752 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 00:56:31.013 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 00:56:31.029 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 00:56:41.225 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 00:56:41.228 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 00:56:41.973 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 00:56:42.763 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 00:56:42.766 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 00:56:43.209 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 00:56:43.946 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 00:56:44.371 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 00:56:44.931 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 00:56:45.291 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 00:56:46.394 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 00:56:47.432 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 00:56:48.114 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 00:56:48.679 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 00:56:49.061 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 00:56:49.466 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 00:56:50.166 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 00:56:50.170 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 00:56:50.542 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 00:56:51.141 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 00:56:51.748 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 00:56:52.329 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 00:56:53.007 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 00:56:53.507 DEBUG testcase.RegisterCase                    - 1: ThanksSub = getText(findTestObject("Page_DEMOQA/div_Thanks for submitting the form"))
+2025-12-28 00:56:53.821 DEBUG testcase.RegisterCase                    - 2: IsiTable = getText(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"))
+2025-12-28 00:56:54.097 DEBUG testcase.RegisterCase                    - 3: fullName = FirstName + " " + LastName
+2025-12-28 00:56:54.105 DEBUG testcase.RegisterCase                    - 4: assert ThanksSub == "Thanks for submitting the form"
+2025-12-28 00:56:54.110 DEBUG testcase.RegisterCase                    - 5: assert IsiTable.contains(fullName)
+2025-12-28 00:56:54.114 DEBUG testcase.RegisterCase                    - 6: assert IsiTable.contains(Email)
+2025-12-28 00:56:54.118 DEBUG testcase.RegisterCase                    - 7: assert IsiTable.contains(Gender)
+2025-12-28 00:56:54.121 DEBUG testcase.RegisterCase                    - 8: assert IsiTable.contains(varUserNumber)
+2025-12-28 00:56:54.124 DEBUG testcase.RegisterCase                    - 9: assert IsiTable.contains(DateOfBirth)
+2025-12-28 00:56:54.128 DEBUG testcase.RegisterCase                    - 10: if (State != "")
+2025-12-28 00:56:54.130 DEBUG testcase.RegisterCase                    - 1: assert IsiTable.contains(State)
+2025-12-28 00:56:54.132 DEBUG testcase.RegisterCase                    - 2: assert IsiTable.contains(City)
+2025-12-28 00:56:54.138 DEBUG testcase.RegisterCase                    - 11: executeJavaScript("document.body.style.zoom='70%'", null)
+2025-12-28 00:56:54.248 DEBUG testcase.RegisterCase                    - 12: click(findTestObject("Object Repository/Page_DEMOQA/button_Close"))
+2025-12-28 00:56:54.693 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 00:56:54.774 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 00:56:54.774 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 00:56:54.873 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) FirstName = 
+2025-12-28 00:56:54.877 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 00:56:54.878 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhan@test.com
+2025-12-28 00:56:54.879 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 00:56:54.879 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123456782
+2025-12-28 00:56:54.881 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 02 January,2000
+2025-12-28 00:56:54.882 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 00:56:54.882 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 00:56:54.886 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:FirstNamerequired
+2025-12-28 00:56:54.890 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 00:56:54.898 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 00:56:55.488 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 00:56:55.489 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 12:56:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 00:56:57.378 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = a2c2c5305a8556113be0cd62dea5fe73
+2025-12-28 00:56:57.378 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 00:56:57.379 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 00:56:57.379 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 00:56:57.380 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 00:56:57.439 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 00:56:58.302 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 00:57:03.305 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 00:57:03.347 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 00:57:03.361 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 00:57:05.539 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 00:57:06.308 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 00:57:06.310 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 00:57:06.744 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 00:57:07.450 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 00:57:07.803 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 00:57:08.436 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 00:57:08.796 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 00:57:09.918 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 00:57:11.008 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 00:57:11.628 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 00:57:12.197 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 00:57:12.571 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 00:57:12.930 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 00:57:13.603 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 00:57:13.604 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 00:57:13.976 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 00:57:14.556 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 00:57:15.145 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 00:57:15.738 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 00:57:16.307 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 00:57:26.437 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Page_DEMOQA/Confirm_TableValuesStudent' located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]' not found
+2025-12-28 00:57:26.439 DEBUG testcase.RegisterCase                    - 25: else
+2025-12-28 00:57:26.441 DEBUG testcase.RegisterCase                    - 1: verifyElementNotPresent(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 0)
+2025-12-28 00:57:26.471 WARN  c.k.k.c.webui.common.WebUiCommonHelper   - Timeout '0' is invalid. Using default page load timeout: '10'
+2025-12-28 00:57:26.828 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 00:57:26.871 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 00:57:26.872 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 00:57:26.908 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 00:57:26.910 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) LastName = 
+2025-12-28 00:57:26.910 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhan@test.com
+2025-12-28 00:57:26.911 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 00:57:26.911 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123456782
+2025-12-28 00:57:26.914 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 03 January,2000
+2025-12-28 00:57:26.916 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 00:57:26.917 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 00:57:26.917 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:LastNamerequired
+2025-12-28 00:57:26.919 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 00:57:26.924 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 00:57:27.429 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 00:57:27.432 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 12:57:28 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 00:57:29.042 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 5feeeffa5fba7ed2b7afbd15a154a3af
+2025-12-28 00:57:29.042 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 00:57:29.043 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 00:57:29.043 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 00:57:29.044 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 00:57:29.136 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 00:57:39.314 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 00:57:39.508 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 00:57:39.519 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 00:57:41.116 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 00:57:41.118 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 00:57:41.993 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 00:57:41.999 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 00:57:42.580 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 00:57:43.290 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 00:57:43.705 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 00:57:44.213 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 00:57:44.565 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 00:57:45.632 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 00:57:46.623 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 00:57:47.339 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 00:57:47.951 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 00:57:48.307 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 00:57:48.688 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 00:57:49.363 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 00:57:49.364 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 00:57:49.763 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 00:57:50.340 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 00:57:50.956 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 00:57:51.533 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 00:57:52.090 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 00:58:02.122 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Page_DEMOQA/Confirm_TableValuesStudent' located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]' not found
+2025-12-28 00:58:02.122 DEBUG testcase.RegisterCase                    - 25: else
+2025-12-28 00:58:02.123 DEBUG testcase.RegisterCase                    - 1: verifyElementNotPresent(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 0)
+2025-12-28 00:58:02.131 WARN  c.k.k.c.webui.common.WebUiCommonHelper   - Timeout '0' is invalid. Using default page load timeout: '10'
+2025-12-28 00:58:02.378 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 00:58:02.420 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 00:58:02.421 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 00:58:02.460 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 00:58:02.462 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 00:58:02.462 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhantest.com
+2025-12-28 00:58:02.462 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 00:58:02.462 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123456782
+2025-12-28 00:58:02.463 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 03 January,2000
+2025-12-28 00:58:02.463 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 00:58:02.463 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 00:58:02.463 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:InvalidEmail
+2025-12-28 00:58:02.466 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 00:58:02.469 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 00:58:02.981 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 00:58:02.983 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 12:58:04 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 00:58:04.541 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = dd2fb969a200f334d71b62ee99aa7ccc
+2025-12-28 00:58:04.542 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 00:58:04.543 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 00:58:04.543 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 00:58:04.544 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 00:58:04.577 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 00:58:05.464 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 00:58:13.052 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 00:58:13.055 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 00:58:14.688 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 00:58:14.697 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 00:58:15.521 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 00:58:16.533 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 00:58:16.533 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 00:58:17.030 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 00:58:20.118 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 00:58:20.779 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 00:58:21.881 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 00:58:22.518 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 00:58:23.961 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 00:58:25.231 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 00:58:25.974 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 00:58:26.638 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 00:58:27.420 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 00:58:27.861 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 00:58:29.129 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 00:58:29.135 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 00:58:29.975 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 00:58:30.811 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 00:58:31.490 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 00:58:32.233 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 00:58:32.966 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 00:58:43.184 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Page_DEMOQA/Confirm_TableValuesStudent' located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]' not found
+2025-12-28 00:58:43.189 DEBUG testcase.RegisterCase                    - 25: else
+2025-12-28 00:58:43.190 DEBUG testcase.RegisterCase                    - 1: verifyElementNotPresent(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 0)
+2025-12-28 00:58:43.199 WARN  c.k.k.c.webui.common.WebUiCommonHelper   - Timeout '0' is invalid. Using default page load timeout: '10'
+2025-12-28 00:58:43.472 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 00:58:43.501 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 00:58:43.501 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 00:58:43.526 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 00:58:43.527 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 00:58:43.528 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhantest@jur
+2025-12-28 00:58:43.528 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 00:58:43.528 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123456782
+2025-12-28 00:58:43.529 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 03 January,2000
+2025-12-28 00:58:43.529 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 00:58:43.529 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 00:58:43.529 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:InvalidEmail
+2025-12-28 00:58:43.534 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 00:58:43.556 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 00:58:44.097 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 00:58:44.099 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 12:58:45 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 00:58:45.708 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = c7d09cb782fada200227563a43284715
+2025-12-28 00:58:45.710 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 00:58:45.712 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 00:58:45.713 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 00:58:45.715 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 00:58:45.780 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 00:58:51.292 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 00:58:51.450 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 00:58:51.451 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 00:58:53.309 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 00:58:53.310 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 00:58:54.040 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 00:58:54.823 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 00:58:54.824 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 00:58:55.272 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 00:58:56.045 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 00:58:56.424 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 00:58:57.081 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 00:58:57.480 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 00:58:58.648 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 00:58:59.771 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 00:59:00.425 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 00:59:01.016 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 00:59:01.415 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 00:59:01.805 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 00:59:02.532 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 00:59:02.535 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 00:59:02.928 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 00:59:03.522 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 00:59:04.162 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 00:59:04.770 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 00:59:05.447 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 00:59:15.487 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Page_DEMOQA/Confirm_TableValuesStudent' located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]' not found
+2025-12-28 00:59:15.490 DEBUG testcase.RegisterCase                    - 25: else
+2025-12-28 00:59:15.491 DEBUG testcase.RegisterCase                    - 1: verifyElementNotPresent(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 0)
+2025-12-28 00:59:15.501 WARN  c.k.k.c.webui.common.WebUiCommonHelper   - Timeout '0' is invalid. Using default page load timeout: '10'
+2025-12-28 00:59:15.773 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 00:59:15.794 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 00:59:15.794 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 00:59:15.825 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 00:59:15.826 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 00:59:15.826 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhan@test.com
+2025-12-28 00:59:15.827 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) Gender = 
+2025-12-28 00:59:15.828 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123456782
+2025-12-28 00:59:15.828 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 03 January,2000
+2025-12-28 00:59:15.828 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 00:59:15.828 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 00:59:15.828 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:Genderrequired
+2025-12-28 00:59:15.829 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 00:59:15.834 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 00:59:16.520 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 00:59:16.523 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 12:59:18 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 00:59:18.228 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = ae7639abcd6d304027ef2ce2520575a0
+2025-12-28 00:59:18.229 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 00:59:18.230 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 00:59:18.230 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 00:59:18.232 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 00:59:18.288 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 00:59:19.378 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 00:59:26.528 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 00:59:26.529 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 00:59:28.654 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 00:59:28.656 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 00:59:29.640 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 00:59:30.481 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 00:59:30.483 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 00:59:31.303 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 00:59:31.853 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 00:59:32.543 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 00:59:32.949 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 00:59:34.147 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 00:59:35.295 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 00:59:35.992 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 00:59:36.602 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 00:59:37.025 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 00:59:37.416 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 00:59:38.157 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 00:59:38.158 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 00:59:38.544 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 00:59:39.140 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 00:59:39.736 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 00:59:40.322 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 00:59:40.903 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 00:59:50.983 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Page_DEMOQA/Confirm_TableValuesStudent' located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]' not found
+2025-12-28 00:59:50.985 DEBUG testcase.RegisterCase                    - 25: else
+2025-12-28 00:59:50.986 DEBUG testcase.RegisterCase                    - 1: verifyElementNotPresent(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 0)
+2025-12-28 00:59:50.993 WARN  c.k.k.c.webui.common.WebUiCommonHelper   - Timeout '0' is invalid. Using default page load timeout: '10'
+2025-12-28 00:59:51.269 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 00:59:51.329 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 00:59:51.330 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 00:59:51.387 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 00:59:51.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 00:59:51.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhan@test.com
+2025-12-28 00:59:51.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 00:59:51.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123
+2025-12-28 00:59:51.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 03 January,2000
+2025-12-28 00:59:51.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 00:59:51.388 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 00:59:51.389 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:Mobilemustbe10digits
+2025-12-28 00:59:51.391 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 00:59:51.398 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 00:59:52.080 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 00:59:52.082 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 12:59:53 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 00:59:53.677 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = b762efb0c768c90db135f1620440db42
+2025-12-28 00:59:53.678 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 00:59:53.678 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 00:59:53.678 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 00:59:53.680 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 00:59:53.725 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 00:59:54.702 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 01:00:20.166 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 01:00:20.167 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 01:00:21.363 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 01:00:21.364 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 01:00:22.098 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 01:00:22.843 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 01:00:22.844 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 01:00:23.261 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 01:00:24.007 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 01:00:24.386 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 01:00:24.981 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 01:00:25.326 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 01:00:26.411 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 01:00:27.432 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 01:00:28.070 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 01:00:28.645 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 01:00:29.032 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 01:00:29.406 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 01:00:30.101 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 01:00:30.102 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 01:00:30.490 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 01:00:31.099 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 01:00:31.705 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 01:00:32.310 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 01:00:32.896 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 01:00:42.918 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Page_DEMOQA/Confirm_TableValuesStudent' located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]' not found
+2025-12-28 01:00:42.922 DEBUG testcase.RegisterCase                    - 25: else
+2025-12-28 01:00:42.923 DEBUG testcase.RegisterCase                    - 1: verifyElementNotPresent(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 0)
+2025-12-28 01:00:42.930 WARN  c.k.k.c.webui.common.WebUiCommonHelper   - Timeout '0' is invalid. Using default page load timeout: '10'
+2025-12-28 01:00:43.186 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 01:00:43.226 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 01:00:43.228 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 01:00:43.252 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 01:00:43.254 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 01:00:43.254 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhan@test.com
+2025-12-28 01:00:43.256 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 01:00:43.256 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 0812abcd90
+2025-12-28 01:00:43.256 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 03 January,2000
+2025-12-28 01:00:43.256 INFO  c.k.katalon.core.main.TestCaseExecutor   - State = NCR
+2025-12-28 01:00:43.256 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 01:00:43.256 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:Mobilemustcontaindigits
+2025-12-28 01:00:43.258 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 01:00:43.260 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 01:00:43.776 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 01:00:43.778 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 1:00:45 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 01:00:45.535 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = efa4a2052e0be412cb2717567b7a4159
+2025-12-28 01:00:45.535 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 01:00:45.539 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 01:00:45.539 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 01:00:45.541 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 01:00:45.567 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 01:00:46.624 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 01:00:57.083 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 01:00:57.104 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 01:01:03.537 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 01:01:03.538 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 01:01:04.252 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 01:01:04.989 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 01:01:04.991 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 01:01:05.406 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 01:01:06.114 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 01:01:06.472 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 01:01:07.063 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 01:01:07.421 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 01:01:08.497 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 01:01:09.520 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 01:01:10.189 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 01:01:10.773 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 01:01:11.159 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 01:01:11.536 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 01:01:12.229 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 01:01:12.230 DEBUG testcase.RegisterCase                    - 1: click(findTestObject("Page_DEMOQA/div_Select State"))
+2025-12-28 01:01:12.613 DEBUG testcase.RegisterCase                    - 2: click(findTestObject("Object Repository/Page_DEMOQA/div_NCR"))
+2025-12-28 01:01:13.224 DEBUG testcase.RegisterCase                    - 3: click(findTestObject("Page_DEMOQA/div_Select City"))
+2025-12-28 01:01:13.818 DEBUG testcase.RegisterCase                    - 4: click(findTestObject("Object Repository/Page_DEMOQA/City_Delhi_Option"))
+2025-12-28 01:01:14.393 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 01:01:14.994 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 01:01:25.046 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Page_DEMOQA/Confirm_TableValuesStudent' located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Thanks for submitting the form'])[1]/following::div[1]' not found
+2025-12-28 01:01:25.048 DEBUG testcase.RegisterCase                    - 25: else
+2025-12-28 01:01:25.049 DEBUG testcase.RegisterCase                    - 1: verifyElementNotPresent(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 0)
+2025-12-28 01:01:25.057 WARN  c.k.k.c.webui.common.WebUiCommonHelper   - Timeout '0' is invalid. Using default page load timeout: '10'
+2025-12-28 01:01:25.317 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 01:01:25.341 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-12-28 01:01:25.341 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/RegisterCase
+2025-12-28 01:01:25.363 INFO  c.k.katalon.core.main.TestCaseExecutor   - FirstName = Farhan
+2025-12-28 01:01:25.364 INFO  c.k.katalon.core.main.TestCaseExecutor   - LastName = Test
+2025-12-28 01:01:25.364 INFO  c.k.katalon.core.main.TestCaseExecutor   - Email = farhan@test.com
+2025-12-28 01:01:25.364 INFO  c.k.katalon.core.main.TestCaseExecutor   - Gender = Male
+2025-12-28 01:01:25.366 INFO  c.k.katalon.core.main.TestCaseExecutor   - varUserNumber = 8123456782
+2025-12-28 01:01:25.366 INFO  c.k.katalon.core.main.TestCaseExecutor   - DateOfBirth = 03 January,2000
+2025-12-28 01:01:25.366 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) State = 
+2025-12-28 01:01:25.368 INFO  c.k.katalon.core.main.TestCaseExecutor   - City = Delhi
+2025-12-28 01:01:25.368 INFO  c.k.katalon.core.main.TestCaseExecutor   - ExpectedResult = Error:Daterequired
+2025-12-28 01:01:25.370 DEBUG testcase.RegisterCase                    - 1: openBrowser("")
+2025-12-28 01:01:25.372 WARN  c.k.k.core.webui.driver.DriverFactory    - A browser is already opened. Closing browser and opening a new one
+2025-12-28 01:01:25.842 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2025-12-28 01:01:25.843 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Dec 28, 2025 1:01:27 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+2025-12-28 01:01:27.445 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 2548ba83ee5f2833dfe5731d58a91a43
+2025-12-28 01:01:27.445 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 143.0.7499.148
+2025-12-28 01:01:27.446 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 11
+2025-12-28 01:01:27.447 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2025-12-28 01:01:27.451 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2025-12-28 01:01:27.491 DEBUG testcase.RegisterCase                    - 2: navigateToUrl("https://demoqa.com/automation-practice-form")
+2025-12-28 01:01:28.504 DEBUG testcase.RegisterCase                    - 3: maximizeWindow()
+2025-12-28 01:01:37.418 DEBUG testcase.RegisterCase                    - 4: if (FirstName != "")
+2025-12-28 01:01:37.422 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_firstName"), FirstName)
+2025-12-28 01:01:38.723 DEBUG testcase.RegisterCase                    - 5: if (LastName != "")
+2025-12-28 01:01:38.726 DEBUG testcase.RegisterCase                    - 1: setText(findTestObject("Object Repository/Page_DEMOQA/input_Name_lastName"), LastName)
+2025-12-28 01:01:39.538 DEBUG testcase.RegisterCase                    - 6: setText(findTestObject("Object Repository/Page_DEMOQA/input_Email_userEmail"), Email)
+2025-12-28 01:01:40.450 DEBUG testcase.RegisterCase                    - 7: if (Gender == "Male")
+2025-12-28 01:01:40.451 DEBUG testcase.RegisterCase                    - 1: check(findTestObject("Page_DEMOQA/label_Male"))
+2025-12-28 01:01:40.903 DEBUG testcase.RegisterCase                    - 10: setText(findTestObject("Object Repository/Page_DEMOQA/input_userNumber"), varUserNumber.toString())
+2025-12-28 01:01:41.714 DEBUG testcase.RegisterCase                    - 11: clearText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), STOP_ON_FAILURE)
+2025-12-28 01:01:42.127 DEBUG testcase.RegisterCase                    - 12: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord(CONTROL, "a"))
+2025-12-28 01:01:42.692 DEBUG testcase.RegisterCase                    - 13: sendKeys(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), Keys.chord("0"))
+2025-12-28 01:01:43.061 DEBUG testcase.RegisterCase                    - 14: setText(findTestObject("Object Repository/Page_DEMOQA/input_Date of Birth"), DateOfBirth)
+2025-12-28 01:01:44.191 DEBUG testcase.RegisterCase                    - 15: setText(findTestObject("Object Repository/Page_DEMOQA/input_Subjects"), "a")
+2025-12-28 01:01:45.232 DEBUG testcase.RegisterCase                    - 16: click(findTestObject("Object Repository/Page_DEMOQA/div_Maths"))
+2025-12-28 01:01:45.900 DEBUG testcase.RegisterCase                    - 17: click(findTestObject("Object Repository/Page_DEMOQA/label_Sports"))
+2025-12-28 01:01:46.493 DEBUG testcase.RegisterCase                    - 18: click(findTestObject("Object Repository/Page_DEMOQA/label_Reading"))
+2025-12-28 01:01:46.872 DEBUG testcase.RegisterCase                    - 19: click(findTestObject("Object Repository/Page_DEMOQA/label_Music"))
+2025-12-28 01:01:47.250 DEBUG testcase.RegisterCase                    - 20: setText(findTestObject("Object Repository/Page_DEMOQA/textarea_Current Address"), "adaw")
+2025-12-28 01:01:47.958 DEBUG testcase.RegisterCase                    - 21: if (State != "")
+2025-12-28 01:01:47.960 DEBUG testcase.RegisterCase                    - 22: else if (State == "")
+2025-12-28 01:01:47.963 DEBUG testcase.RegisterCase                    - 1: verifyElementNotClickable(findTestObject("Page_DEMOQA/Select City - input"), STOP_ON_FAILURE)
+2025-12-28 01:01:48.263 DEBUG testcase.RegisterCase                    - 23: click(findTestObject("Object Repository/Page_DEMOQA/button_Submit"))
+2025-12-28 01:01:48.688 DEBUG testcase.RegisterCase                    - 24: if (waitForElementVisible(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"), 10))
+2025-12-28 01:01:49.158 DEBUG testcase.RegisterCase                    - 1: ThanksSub = getText(findTestObject("Page_DEMOQA/div_Thanks for submitting the form"))
+2025-12-28 01:01:49.434 DEBUG testcase.RegisterCase                    - 2: IsiTable = getText(findTestObject("Page_DEMOQA/Confirm_TableValuesStudent"))
+2025-12-28 01:01:49.698 DEBUG testcase.RegisterCase                    - 3: fullName = FirstName + " " + LastName
+2025-12-28 01:01:49.698 DEBUG testcase.RegisterCase                    - 4: assert ThanksSub == "Thanks for submitting the form"
+2025-12-28 01:01:49.699 DEBUG testcase.RegisterCase                    - 5: assert IsiTable.contains(fullName)
+2025-12-28 01:01:49.699 DEBUG testcase.RegisterCase                    - 6: assert IsiTable.contains(Email)
+2025-12-28 01:01:49.700 DEBUG testcase.RegisterCase                    - 7: assert IsiTable.contains(Gender)
+2025-12-28 01:01:49.701 DEBUG testcase.RegisterCase                    - 8: assert IsiTable.contains(varUserNumber)
+2025-12-28 01:01:49.702 DEBUG testcase.RegisterCase                    - 9: assert IsiTable.contains(DateOfBirth)
+2025-12-28 01:01:49.703 DEBUG testcase.RegisterCase                    - 10: if (State != "")
+2025-12-28 01:01:49.703 DEBUG testcase.RegisterCase                    - 11: executeJavaScript("document.body.style.zoom='70%'", null)
+2025-12-28 01:01:49.782 DEBUG testcase.RegisterCase                    - 12: click(findTestObject("Object Repository/Page_DEMOQA/button_Close"))
+2025-12-28 01:01:50.167 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/RegisterCase
+2025-12-28 01:01:50.758 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-12-28 01:01:50.758 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/DDRegist
+2025-12-28 01:01:50.758 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================
