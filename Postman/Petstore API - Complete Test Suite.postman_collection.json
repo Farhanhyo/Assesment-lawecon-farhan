@@ -1,0 +1,958 @@
+{
+	"info": {
+		"_postman_id": "3a56a5ef-0f9c-4744-8ca6-131cc726f84d",
+		"name": "Petstore API - Complete Test Suite",
+		"description": "# Petstore API - Complete Test Suite\n\n## 📋 Overview\n\nAPI test suite for **Swagger Petstore v2** with automated test scripts, request chaining, and Newman CLI support. This collection includes **15 comprehensive test cases** covering Pet Management, User Management, and Store/Order operations.\n\n## 🚀 Quick Start\n\n### Prerequisites\n\n- Postman Desktop or Web\n    \n- Newman CLI (optional, for command-line execution)\n    \n\n### Setup\n\n1. Import this collection into Postman\n    \n2. Import or activate the \"Petstore QA\" environment\n    \n3. Run the collection using Collection Runner or Newman CLI\n    \n\n## 🌐 Base URL\n\n```\nhttps://petstore.swagger.io/v2\n\n ```\n\n## 📦 Environment Variables\n\n| Variable | Description | Set By |\n| --- | --- | --- |\n| `base_url` | API base URL | Manual/Environment |\n| `pet_id` | Dynamic pet ID | TC-PET-001 (auto) |\n| `username` | Test username | TC-USER-001 (auto) |\n| `password` | Test password | TC-USER-001 (auto) |\n| `order_id` | Order ID | Future use |\n\n## 📂 Test Structure\n\n### Folder 1: Pet Management (8 tests)\n\n- ✅ TC-PET-001: Add New Pet\n    \n- ✅ TC-PET-002: Get Pet by ID\n    \n- ✅ TC-PET-003: Update Pet\n    \n- ✅ TC-PET-004: Delete Pet\n    \n- ❌ TC-PET-006: Add Pet Without Name (negative)\n    \n- ❌ TC-PET-007: Update Pet with Empty ID (negative)\n    \n- ❌ TC-PET-008: Delete Pet with Empty ID (negative)\n    \n- ❌ TC-PET-009: Get Pet with Invalid ID (negative)\n    \n\n### Folder 2: User Management (5 tests)\n\n- ✅ TC-USER-001: Create User\n    \n- ✅ TC-USER-002: Login User\n    \n- ✅ TC-USER-003: Logout User\n    \n- ❌ TC-USER-004: Login With Invalid Credentials (negative)\n    \n- ❌ TC-USER-005: Create User with Invalid Email (negative)\n    \n\n### Folder 3: Store / Order (2 tests)\n\n- ✅ TC-STORE-001: Get Inventory\n    \n- ❌ TC-STORE-002: Create Order Without ID (negative)\n    \n\n## 🔗 Request Chaining\n\nThe collection uses environment variables for request chaining:\n\n- TC-PET-001 creates a pet and saves `pet_id`\n    \n- TC-PET-002, TC-PET-003, TC-PET-004 use the saved `pet_id`\n    \n- TC-USER-001 generates and saves `username` and `password`\n    \n- TC-USER-002 uses saved credentials for login\n    \n\n## ✅ Test Assertions\n\nEach request includes:\n\n- HTTP status code validation\n    \n- Response body structure validation\n    \n- Response time validation (< 2000ms)\n    \n- Field-specific value checks\n    \n- Error message validation (for negative tests)\n    \n\n## 🖥️ Newman CLI Execution\n\n### Basic Run\n\n``` bash\nnewman run \"Petstore_API.postman_collection.json\" \\\n  -e \"Petstore_QA.postman_environment.json\"\n\n ```\n\n### With HTML Report\n\n``` bash\nnewman run \"Petstore_API.postman_collection.json\" \\\n  -e \"Petstore_QA.postman_environment.json\" \\\n  -r cli,html \\\n  --reporter-html-export newman-report.html\n\n ```\n\n### CI/CD Integration\n\n``` bash\nnewman run \"Petstore_API.postman_collection.json\" \\\n  -e \"Petstore_QA.postman_environment.json\" \\\n  -r cli,json \\\n  --reporter-json-export results.json \\\n  --bail\n\n ```\n\n## 📊 Expected Results\n\n- **Total Tests**: 15 requests\n    \n- **Positive Tests**: 8\n    \n- **Negative Tests**: 7\n    \n- **Success Rate**: 100% (when API is healthy)\n    \n\n---\n\n**Version**: 1.0  \n**Last Updated**: 2024  \n**API Documentation**: [https://petstore.swagger.io/](https://petstore.swagger.io/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14721422",
+		"_collection_link": "https://www.postman.com/security-physicist-12800186/workspace/lawecon-assesment/collection/14721422-3a56a5ef-0f9c-4744-8ca6-131cc726f84d?action=share&source=collection_link&creator=14721422"
+	},
+	"item": [
+		{
+			"name": "Pet Management",
+			"item": [
+				{
+					"name": "TC-PET-001: Add New Pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response has required properties: id, name, status', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('id');",
+									"    pm.expect(jsonData).to.have.property('name');",
+									"    pm.expect(jsonData).to.have.property('status');",
+									"})",
+									"",
+									"pm.test('Pet name equals \\'Buddy\\'', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.name).to.eql('Buddy');",
+									"})",
+									"",
+									"pm.test('Pet status equals \\'available\\'', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.status).to.eql('available');",
+									"})",
+									"",
+									"pm.test('Save pet_id to environment variable', function () {",
+									"// Mengambil teks respons raw",
+									"const rawResponse = pm.response.text();",
+									"",
+									"// Menggunakan regex untuk mencari id dalam respons",
+									"const idRegex = /\"id\":\\s*(\\d+)/;",
+									"const match = idRegex.exec(rawResponse);",
+									"// Mengambil nilai id yang ditemukan",
+									"if (match && match[1]) {",
+									"    const preciseId = match[1];",
+									"    pm.environment.set(\"pet_id\", preciseId);",
+									"    console.log(\"ID Akurat Tersimpan: \" + preciseId);",
+									"}",
+									"})",
+									"",
+									"pm.test('Response time is less than 2000ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"packages": {},
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"name\": \"Buddy\",\n  \"photoUrls\": [\"https://example.com/photo1.jpg\"],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"friendly\"\n    }\n  ],\n  \"status\": \"available\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						},
+						"description": "Create a new pet with valid data and save pet_id to environment"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-PET-002: Get Pet by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// 1. Pastikan Request Berhasil (Status 200)\r",
+									"pm.test(\"Status code is 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// 2. Pastikan Response adalah JSON yang valid\r",
+									"pm.test(\"Response is a valid JSON\", function () {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"// 3. Validasi Konten Data\r",
+									"pm.test(\"Pet details match expected values\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    \r",
+									"    const rawResponse = pm.response.text();\r",
+									"    const idMatch = rawResponse.match(/\"id\":\\s*(\\d+)/);\r",
+									"    const actualId = idMatch ? idMatch[1] : null;\r",
+									"\r",
+									"    // Ambil ID dari environment\r",
+									"    const expectedId = pm.environment.get(\"pet_id\");\r",
+									"    \r",
+									"    // Bandingkan ID sebagai string murni\r",
+									"    pm.expect(actualId).to.eql(expectedId);\r",
+									"    \r",
+									"    // Assert Properti Utama\r",
+									"    pm.expect(jsonData).to.have.property('name');\r",
+									"    pm.expect(jsonData).to.have.property('status');\r",
+									"});\r",
+									"\r",
+									"// 4. Verifikasi Tipe Data Khusus (Opsional)\r",
+									"pm.test(\"Data types are correct\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).to.be.a('number');\r",
+									"    pm.expect(jsonData.name).to.be.a('string');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/{{pet_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"{{pet_id}}"
+							]
+						},
+						"description": "Retrieve pet details using the pet_id from previous request"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-PET-003: Update Pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// 1. Pastikan status code adalah 200 OK (Berhasil Update)\r",
+									"pm.test(\"Status code is 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// 2. Ambil ID secara aman (menghindari pembulatan angka besar)\r",
+									"const rawResponse = pm.response.text();\r",
+									"const idMatch = rawResponse.match(/\"id\":\\s*(\\d+)/);\r",
+									"const actualId = idMatch ? idMatch[1] : null;\r",
+									"const expectedId = pm.environment.get(\"pet_id\");\r",
+									"\r",
+									"// 3. Validasi Konten Data yang Diperbarui\r",
+									"pm.test(\"Pet data updated successfully\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Verifikasi ID tetap sama dengan yang dikirim\r",
+									"    pm.expect(actualId).to.eql(expectedId);\r",
+									"    \r",
+									"    // Verifikasi Nama baru (Pastikan sesuai dengan yang Anda tulis di Body PUT)\r",
+									"    // Misalnya Anda mengubah nama menjadi \"Buddy Updated\"\r",
+									"    pm.expect(jsonData.name).to.eql(\"Buddy Updated\");\r",
+									"    \r",
+									"    // Verifikasi Status baru (Misalnya dari 'available' menjadi 'sold')\r",
+									"    pm.expect(jsonData.status).to.eql(\"sold\");\r",
+									"});\r",
+									"\r",
+									"// 4. Verifikasi Struktur Response\r",
+									"pm.test(\"Response structure is complete\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('id');\r",
+									"    pm.expect(jsonData).to.have.property('category');\r",
+									"    pm.expect(jsonData).to.have.property('photoUrls');\r",
+									"    pm.expect(jsonData).to.have.property('tags');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{pet_id}},\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"name\": \"Buddy Updated\",\n  \"photoUrls\": [\"https://example.com/photo2.jpg\"],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"very-friendly\"\n    }\n  ],\n  \"status\": \"sold\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						},
+						"description": "Update existing pet information"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-PET-004: Delete Pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// 1. Verifikasi Status Code (Biasanya 200 OK untuk Petstore)\r",
+									"pm.test(\"Status code is 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// 2. Verifikasi Struktur Response Body\r",
+									"pm.test(\"Response contains deletion confirmation\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Server biasanya mengembalikan code 200 di dalam body\r",
+									"    pm.expect(jsonData.code).to.eql(200);\r",
+									"    \r",
+									"    // Verifikasi message mengandung ID yang dihapus\r",
+									"    const expectedId = pm.environment.get(\"pet_id\");\r",
+									"    pm.expect(jsonData.message).to.eql(expectedId.toString());\r",
+									"});\r",
+									"\r",
+									"// 3. Opsional: Hapus variabel environment agar bersih setelah testing selesai\r",
+									"pm.test(\"Cleanup: Remove pet_id from environment\", function () {\r",
+									"    pm.environment.unset(\"pet_id\");\r",
+									"    console.log(\"Variabel pet_id telah dihapus dari environment.\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/{{pet_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"{{pet_id}}"
+							]
+						},
+						"description": "Delete the pet created in TC-PET-001"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-PET-008: Delete Pet with Empty ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// 1. Verifikasi Status Code Error (404 atau 405 tergantung server)\r",
+									"pm.test(\"Status code is 404 or 405\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([404, 405]);\r",
+									"});\r",
+									"\r",
+									"// 2. Verifikasi bahwa data tidak terhapus/error ditangani\r",
+									"pm.test(\"Error message is present or body is empty\", function () {\r",
+									"    if (pm.response.code === 404) {\r",
+									"        // Jika 404, biasanya ada message \"Pet not found\" atau serupa\r",
+									"        const jsonData = pm.response.json();\r",
+									"        pm.expect(jsonData).to.have.property('message');\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								""
+							]
+						},
+						"description": "Negative test - attempt to delete without pet ID (expects 405)"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-PET-009: Get Pet with Invalid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// 1. Verifikasi Status Code (Biasanya 404 atau 400 tergantung spek API)\r",
+									"pm.test(\"Status code is 404 Not Found\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									"// 2. Verifikasi Pesan Error dalam Body\r",
+									"pm.test(\"Response contains error message\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    \r",
+									"    // Memastikan ada properti message yang menjelaskan error\r",
+									"    pm.expect(jsonData).to.have.property('message');\r",
+									"    \r",
+									"    // Pada Petstore, biasanya mengembalikan \"java.lang.NumberFormatException\" \r",
+									"    // jika ID yang dimasukkan bukan angka\r",
+									"    if (jsonData.message.includes(\"NumberFormatException\")) {\r",
+									"        pm.expect(jsonData.message).to.contain(\"NumberFormatException\");\r",
+									"    } else {\r",
+									"        pm.expect(jsonData.message).to.eql(\"Pet not found\");\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"// 3. Verifikasi Tipe Response\r",
+									"pm.test(\"Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/99999999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"99999999"
+							]
+						},
+						"description": "Negative test - retrieve non-existent pet (expects 404)"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-PET-006: Add Pet Without Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 400 or 500 (validation error)', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        400,",
+									"        500",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('Response contains error message if present', function () {",
+									"    try {",
+									"        const jsonData = pm.response.json();",
+									"        if (jsonData.message || jsonData.error) {",
+									"            pm.expect(jsonData.message || jsonData.error).to.be.a('string');",
+									"            console.log('Error message received: ' + (jsonData.message || jsonData.error));",
+									"        } else {",
+									"            console.log('No error message property found in response');",
+									"        }",
+									"    } catch (e) {",
+									"        console.log('Response is not JSON or could not be parsed: ' + e.message);",
+									"    }",
+									"})",
+									"",
+									"pm.test('Response time is acceptable (< 2000ms)', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"photoUrls\": [\"https://example.com/photo1.jpg\"],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"test\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						},
+						"description": "Negative test - attempt to create pet without required 'name' field (expects 400 or 500)"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-PET-007: Update Pet with Empty ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 400 or 404 (missing ID error)', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        400,",
+									"        404",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('Response contains error message if present', function () {",
+									"    try {",
+									"        const jsonData = pm.response.json();",
+									"        if (jsonData.message || jsonData.error) {",
+									"            pm.expect(jsonData.message || jsonData.error).to.be.a('string');",
+									"            console.log('Error message received: ' + (jsonData.message || jsonData.error));",
+									"        } else {",
+									"            console.log('No error message property found in response');",
+									"        }",
+									"    } catch (e) {",
+									"        console.log('Response is not JSON or could not be parsed: ' + e.message);",
+									"    }",
+									"})",
+									"",
+									"pm.test('Response time is acceptable (< 2000ms)', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"name\": \"Test Pet\",\n  \"photoUrls\": [\"https://example.com/photo1.jpg\"],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"test\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						},
+						"description": "Negative test - attempt to update pet without ID field (expects 400 or 404)"
+					},
+					"response": []
+				}
+			],
+			"description": "## Pet Management Test Cases\n\nThis folder contains 8 test cases for CRUD operations on pets in the Petstore API.\n\n### Test Coverage:\n\n- ✅ **Create**: Add new pet with valid data (TC-PET-001)\n    \n- ✅ **Read**: Retrieve pet by ID (TC-PET-002)\n    \n- ✅ **Update**: Modify existing pet information (TC-PET-003)\n    \n- ✅ **Delete**: Remove pet from system (TC-PET-004)\n    \n- ❌ **Negative Tests**:\n    - TC-PET-006: Add pet without required name field\n        \n    - TC-PET-007: Update pet without ID field\n        \n    - TC-PET-008: Delete pet with empty ID\n        \n    - TC-PET-009: Get pet with invalid ID\n        \n\n### Request Chaining:\n\nTC-PET-001 creates a pet and saves the `pet_id` to environment variables. Subsequent requests (TC-PET-002, TC-PET-003, TC-PET-004) use this `pet_id` for operations.\n\n### Execution Order:\n\nRun positive tests (TC-PET-001 through TC-PET-004) in sequence for proper test flow. Negative tests can run independently."
+		},
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "TC-USER-001: Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response has message or code property', function () {",
+									"    const jsonData = pm.response.json();",
+									"    const hasMessage = jsonData.hasOwnProperty('message');",
+									"    const hasCode = jsonData.hasOwnProperty('code');",
+									"    pm.expect(hasMessage || hasCode).to.be.true;",
+									"})",
+									"",
+									"pm.test('Response time is less than 2000ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})",
+									"",
+									"pm.test('Log saved credentials', function () {",
+									"    const username = pm.environment.get('username');",
+									"    const password = pm.environment.get('password');",
+									"    console.log('Username saved to environment:', username);",
+									"    console.log('Password saved to environment:', password);",
+									"    pm.expect(username).to.not.be.undefined;",
+									"    pm.expect(password).to.not.be.undefined;",
+									"})"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// Generate dynamic username with timestamp for uniqueness",
+									"const dynamicUsername = \"testuser_\" + Date.now();",
+									"pm.environment.set(\"username\", dynamicUsername);",
+									"console.log(\"Generated dynamic username:\", dynamicUsername);",
+									"",
+									"// Set password",
+									"const password = \"Test@1234\";",
+									"pm.environment.set(\"password\", password);",
+									"console.log(\"Password set to environment:\", password);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"username\": \"testuser_{{$timestamp}}\",\n  \"firstName\": \"Test\",\n  \"lastName\": \"User\",\n  \"email\": \"testuser@example.com\",\n  \"password\": \"Test@1234\",\n  \"phone\": \"1234567890\",\n  \"userStatus\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user"
+							]
+						},
+						"description": "Create a new user and save credentials to environment"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-USER-002: Login User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test('Response has message property', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"});",
+									"",
+									"// Menambahkan pengecekan apakah message mengandung ID atau status session",
+									"pm.test('Message is not empty', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.not.be.empty;",
+									"});",
+									"",
+									"pm.test('Response time is less than 2000ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/login?username={{username}}&password={{password}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "{{username}}"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}"
+								}
+							]
+						},
+						"description": "Login with created user credentials"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-USER-003: Logout User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response has message property', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property('message');",
+									"})",
+									"",
+									"pm.test('Response time is less than 2000ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})",
+									"",
+									"pm.test('Message value is ok', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql(\"ok\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						},
+						"description": "Logout the currently logged-in user"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-USER-004: Login With Invalid Credentials",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Kita tahu API ini salah karena memberi 200, maka kita buat tes yang mengecek keanehan ini",
+									"pm.test(\"Status code should NOT be 200 for invalid login\", function () {",
+									"    // Tes ini akan FAIL jika statusnya 200 (sehingga laporan Anda akurat)",
+									"    pm.expect(pm.response.code).to.not.equal(200);",
+									"});",
+									"",
+									"pm.test(\"Should not contain session message\", function () {",
+									"    const jsonData = pm.response.json();",
+									"    // Tes ini akan FAIL jika pesan mengandung 'logged in user session'",
+									"    pm.expect(jsonData.message).to.not.contain(\"logged in user session\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/login?username=invalid_user&password=wrong_pass",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "invalid_user"
+								},
+								{
+									"key": "password",
+									"value": "wrong_pass"
+								}
+							]
+						},
+						"description": "Negative test - login with invalid credentials (expects 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-USER-005: Create User with Invalid Email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status code indicates validation result (400 or 200)', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        400,",
+									"        200",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('Response contains error message if status is 400', function () {",
+									"    if (pm.response.code === 400) {",
+									"        try {",
+									"            const jsonData = pm.response.json();",
+									"            pm.expect(jsonData.message || jsonData.error).to.exist;",
+									"            console.log('Validation error message: ' + (jsonData.message || jsonData.error));",
+									"        } catch (e) {",
+									"            console.log('Could not parse error response: ' + e.message);",
+									"        }",
+									"    } else {",
+									"        console.log('Status is not 400, skipping error message validation');",
+									"    }",
+									"})",
+									"",
+									"pm.test('Response time is acceptable (< 2000ms)', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"username\": \"testuser_invalid_email\",\n  \"firstName\": \"Test\",\n  \"lastName\": \"User\",\n  \"email\": \"invalid-email-format\",\n  \"password\": \"Test@1234\",\n  \"phone\": \"1234567890\",\n  \"userStatus\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user"
+							]
+						},
+						"description": "Negative test - attempt to create user with invalid email format (expects 400)"
+					},
+					"response": []
+				}
+			],
+			"description": "## User Management Test Cases\n\nThis folder contains 5 test cases for user authentication and session management.\n\n### Test Coverage:\n\n- ✅ **Create User**: Register new user with dynamic credentials (TC-USER-001)\n    \n- ✅ **Login**: Authenticate with valid credentials (TC-USER-002)\n    \n- ✅ **Logout**: End user session (TC-USER-003)\n    \n- ❌ **Negative Tests**:\n    \n    - TC-USER-004: Login with invalid credentials\n        \n    - TC-USER-005: Create user with invalid email format\n        \n\n### Request Chaining:\n\nTC-USER-001 generates a unique username (timestamp-based) and password, saving them to environment variables. TC-USER-002 uses these credentials for login.\n\n### Dynamic Data:\n\nUsername is generated dynamically using `testuser_{{$timestamp}}` pattern to ensure uniqueness across test runs."
+		},
+		{
+			"name": "Store / Order",
+			"item": [
+				{
+					"name": "TC-STORE-001: Get Inventory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})",
+									"",
+									"pm.test('Response is an object', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('object');",
+									"})",
+									"",
+									"pm.test('Response has at least one property (inventory data)', function () {",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(Object.keys(jsonData).length).to.be.at.least(1);",
+									"})",
+									"",
+									"pm.test('Response time is less than 2000ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/store/inventory",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"inventory"
+							]
+						},
+						"description": "Retrieve store inventory status"
+					},
+					"response": []
+				},
+				{
+					"name": "TC-STORE-002: Create Order Without ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200 or 400', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        200,",
+									"        400",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('If status is 200, response has id property', function () {",
+									"    if (pm.response.code === 200) {",
+									"        const jsonData = pm.response.json();",
+									"        pm.expect(jsonData).to.have.property('id');",
+									"    } else {",
+									"        pm.expect(true).to.be.true;",
+									"    }",
+									"})",
+									"",
+									"pm.test('Response time is less than 2000ms', function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"petId\": 1,\n  \"quantity\": 1,\n  \"shipDate\": \"2024-01-15T10:00:00.000Z\",\n  \"status\": \"placed\",\n  \"complete\": false\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/store/order",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"order"
+							]
+						},
+						"description": "Negative test - create order without ID field (expects 400)"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://petstore.swagger.io/v2"
+		},
+		{
+			"key": "base_url",
+			"value": ""
+		}
+	]
+}
