@@ -1,0 +1,703 @@
+{
+	"id": "bd408d9c-c4a0-49ab-9bb7-fe791ff10213",
+	"name": "Petstore API - Complete Test Suite",
+	"timestamp": "2025-12-28T00:40:29.836Z",
+	"collection_id": "14721422-3a56a5ef-0f9c-4744-8ca6-131cc726f84d",
+	"folder_id": 0,
+	"environment_id": "14721422-969fd651-5aee-4e70-aa1f-a495a7cc8148",
+	"totalPass": 47,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-12-28T00:40:23.515Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "9dd492e3-3a80-4076-9c85-e085fc398ba2",
+			"name": "TC-PET-001: Add New Pet",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 1199,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has required properties: id, name, status": true,
+				"Pet name equals 'Buddy'": true,
+				"Pet status equals 'available'": true,
+				"Save pet_id to environment variable": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has required properties: id, name, status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pet name equals 'Buddy'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pet status equals 'available'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Save pet_id to environment variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1199
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has required properties: id, name, status": true,
+					"Pet name equals 'Buddy'": true,
+					"Pet status equals 'available'": true,
+					"Save pet_id to environment variable": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "f49f71de-8af3-4182-bf1d-d8ccde3e6196",
+			"name": "TC-PET-002: Get Pet by ID",
+			"url": "https://petstore.swagger.io/v2/pet/9223372036854775807",
+			"time": 278,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response is a valid JSON": true,
+				"Pet details match expected values": true,
+				"Data types are correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is a valid JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pet details match expected values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data types are correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				278
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response is a valid JSON": true,
+					"Pet details match expected values": true,
+					"Data types are correct": true
+				}
+			]
+		},
+		{
+			"id": "60026995-32f1-4451-94ce-3f0fd492d781",
+			"name": "TC-PET-003: Update Pet",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 277,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Pet data updated successfully": true,
+				"Response structure is complete": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Pet data updated successfully": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response structure is complete": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				277
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Pet data updated successfully": true,
+					"Response structure is complete": true
+				}
+			]
+		},
+		{
+			"id": "ae06ff2f-d052-4fd4-9e1a-6bea50180819",
+			"name": "TC-PET-004: Delete Pet",
+			"url": "https://petstore.swagger.io/v2/pet/9223372036854775807",
+			"time": 280,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response contains deletion confirmation": true,
+				"Cleanup: Remove pet_id from environment": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains deletion confirmation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cleanup: Remove pet_id from environment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				280
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response contains deletion confirmation": true,
+					"Cleanup: Remove pet_id from environment": true
+				}
+			]
+		},
+		{
+			"id": "0c5c2617-a237-48c5-84ca-202c6821bd77",
+			"name": "TC-PET-008: Delete Pet with Empty ID",
+			"url": "https://petstore.swagger.io/v2/pet/",
+			"time": 282,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Status code is 404 or 405": true,
+				"Error message is present or body is empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404 or 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Error message is present or body is empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				282
+			],
+			"allTests": [
+				{
+					"Status code is 404 or 405": true,
+					"Error message is present or body is empty": true
+				}
+			]
+		},
+		{
+			"id": "a36dcf5e-a7b6-4c27-bddd-f9e4cbec56ea",
+			"name": "TC-PET-009: Get Pet with Invalid ID",
+			"url": "https://petstore.swagger.io/v2/pet/99999999",
+			"time": 279,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404 Not Found": true,
+				"Response contains error message": true,
+				"Content-Type is application/json": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404 Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				279
+			],
+			"allTests": [
+				{
+					"Status code is 404 Not Found": true,
+					"Response contains error message": true,
+					"Content-Type is application/json": true
+				}
+			]
+		},
+		{
+			"id": "1e19c338-9872-4bcf-b48a-6923bfd719d8",
+			"name": "TC-PET-006: Add Pet Without Name",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 278,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400 or 500 (validation error)": false,
+				"Response contains error message if present": true,
+				"Response time is acceptable (< 2000ms)": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400 or 500 (validation error)": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains error message if present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is acceptable (< 2000ms)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				278
+			],
+			"allTests": [
+				{
+					"Status code is 400 or 500 (validation error)": false,
+					"Response contains error message if present": true,
+					"Response time is acceptable (< 2000ms)": true
+				}
+			]
+		},
+		{
+			"id": "14254bde-b026-42b2-8cd8-44ac933d85d8",
+			"name": "TC-PET-007: Update Pet with Empty ID",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 272,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400 or 404 (missing ID error)": false,
+				"Response contains error message if present": true,
+				"Response time is acceptable (< 2000ms)": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400 or 404 (missing ID error)": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains error message if present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is acceptable (< 2000ms)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				272
+			],
+			"allTests": [
+				{
+					"Status code is 400 or 404 (missing ID error)": false,
+					"Response contains error message if present": true,
+					"Response time is acceptable (< 2000ms)": true
+				}
+			]
+		},
+		{
+			"id": "59c5b24c-d79c-4432-ae87-76409ebbf44d",
+			"name": "TC-USER-001: Create User",
+			"url": "https://petstore.swagger.io/v2/user",
+			"time": 278,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has message or code property": true,
+				"Response time is less than 2000ms": true,
+				"Log saved credentials": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has message or code property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Log saved credentials": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				278
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has message or code property": true,
+					"Response time is less than 2000ms": true,
+					"Log saved credentials": true
+				}
+			]
+		},
+		{
+			"id": "a747b47d-6153-453a-9ebf-456188535470",
+			"name": "TC-USER-002: Login User",
+			"url": "https://petstore.swagger.io/v2/user/login?username=testuser_1766882427684&password=Test@1234",
+			"time": 249,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has message property": true,
+				"Message is not empty": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has message property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				249
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has message property": true,
+					"Message is not empty": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "4d97dd8a-e5cd-48f8-9763-3a099573de44",
+			"name": "TC-USER-003: Logout User",
+			"url": "https://petstore.swagger.io/v2/user/logout",
+			"time": 302,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has message property": true,
+				"Response time is less than 2000ms": true,
+				"Message value is ok": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has message property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message value is ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				302
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has message property": true,
+					"Response time is less than 2000ms": true,
+					"Message value is ok": true
+				}
+			]
+		},
+		{
+			"id": "dd95be2b-6346-477d-83e0-a9cd8aa87c01",
+			"name": "TC-USER-004: Login With Invalid Credentials",
+			"url": "https://petstore.swagger.io/v2/user/login?username=invalid_user&password=wrong_pass",
+			"time": 246,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should NOT be 200 for invalid login": false,
+				"Should not contain session message": false
+			},
+			"testPassFailCounts": {
+				"Status code should NOT be 200 for invalid login": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Should not contain session message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				246
+			],
+			"allTests": [
+				{
+					"Status code should NOT be 200 for invalid login": false,
+					"Should not contain session message": false
+				}
+			]
+		},
+		{
+			"id": "66fddbb7-d67b-4a0c-bb90-1f8932a0ee08",
+			"name": "TC-USER-005: Create User with Invalid Email",
+			"url": "https://petstore.swagger.io/v2/user",
+			"time": 247,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code indicates validation result (400 or 200)": true,
+				"Response contains error message if status is 400": true,
+				"Response time is acceptable (< 2000ms)": true
+			},
+			"testPassFailCounts": {
+				"Status code indicates validation result (400 or 200)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message if status is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is acceptable (< 2000ms)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				247
+			],
+			"allTests": [
+				{
+					"Status code indicates validation result (400 or 200)": true,
+					"Response contains error message if status is 400": true,
+					"Response time is acceptable (< 2000ms)": true
+				}
+			]
+		},
+		{
+			"id": "7b052035-5cc3-45ef-98aa-a1ebaaf713b8",
+			"name": "TC-STORE-001: Get Inventory",
+			"url": "https://petstore.swagger.io/v2/store/inventory",
+			"time": 248,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is an object": true,
+				"Response has at least one property (inventory data)": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has at least one property (inventory data)": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				248
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is an object": true,
+					"Response has at least one property (inventory data)": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "ba8f24db-9ca8-4ab5-a82f-4d9f4bb16e2b",
+			"name": "TC-STORE-002: Create Order Without ID",
+			"url": "https://petstore.swagger.io/v2/store/order",
+			"time": 248,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 or 400": true,
+				"If status is 200, response has id property": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"If status is 200, response has id property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				248
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 400": true,
+					"If status is 200, response has id property": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 4963,
+	"collection": {
+		"requests": [
+			{
+				"id": "9dd492e3-3a80-4076-9c85-e085fc398ba2",
+				"method": "POST"
+			},
+			{
+				"id": "f49f71de-8af3-4182-bf1d-d8ccde3e6196",
+				"method": "GET"
+			},
+			{
+				"id": "60026995-32f1-4451-94ce-3f0fd492d781",
+				"method": "PUT"
+			},
+			{
+				"id": "ae06ff2f-d052-4fd4-9e1a-6bea50180819",
+				"method": "DELETE"
+			},
+			{
+				"id": "0c5c2617-a237-48c5-84ca-202c6821bd77",
+				"method": "DELETE"
+			},
+			{
+				"id": "a36dcf5e-a7b6-4c27-bddd-f9e4cbec56ea",
+				"method": "GET"
+			},
+			{
+				"id": "1e19c338-9872-4bcf-b48a-6923bfd719d8",
+				"method": "POST"
+			},
+			{
+				"id": "14254bde-b026-42b2-8cd8-44ac933d85d8",
+				"method": "PUT"
+			},
+			{
+				"id": "59c5b24c-d79c-4432-ae87-76409ebbf44d",
+				"method": "POST"
+			},
+			{
+				"id": "a747b47d-6153-453a-9ebf-456188535470",
+				"method": "GET"
+			},
+			{
+				"id": "4d97dd8a-e5cd-48f8-9763-3a099573de44",
+				"method": "GET"
+			},
+			{
+				"id": "dd95be2b-6346-477d-83e0-a9cd8aa87c01",
+				"method": "GET"
+			},
+			{
+				"id": "66fddbb7-d67b-4a0c-bb90-1f8932a0ee08",
+				"method": "POST"
+			},
+			{
+				"id": "7b052035-5cc3-45ef-98aa-a1ebaaf713b8",
+				"method": "GET"
+			},
+			{
+				"id": "ba8f24db-9ca8-4ab5-a82f-4d9f4bb16e2b",
+				"method": "POST"
+			}
+		]
+	}
+}
